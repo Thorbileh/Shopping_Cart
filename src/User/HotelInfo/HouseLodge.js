@@ -8,14 +8,20 @@ import { useEffect, useState } from 'react';
 const HotelInfomation = () => {
     const navigate = useNavigate()
         
+    const {state}=useLocation()
+    const {data} =state
+    const [hotelss,setHotelss]=useState({})
+    useEffect(()=>{
+        setHotelss(data)
+    })
     const viewMore = () => {
         
-        navigate("/HouseLodgeRooms")
+        navigate("/HouseLodgeRooms",{state:{data:hotelss}})
     }
     return (
         <body>
             <div className={hotelMod.hotelBackg}>
-                <img src={hotel2} alt='' width='1700' />
+                <img src={hotelss.Image} alt='' width='1700' />
                 <nav className={hotelMod.hotNav}>
                     <Link to="/">Home</Link>
                     <Link to="/Book">Book</Link>
@@ -26,7 +32,7 @@ const HotelInfomation = () => {
 
                 </nav>
                 <div className={hotelMod.hotelName}>
-                    <h1>White House Lodge</h1>
+                    <h1>{hotelss.HotelName}</h1>
 
                 </div>
                 <p className={hotelMod.p}>The secret of a happy life isn’t buried in a treasure chest…
@@ -36,7 +42,7 @@ const HotelInfomation = () => {
             <div>
                 <div className={hotelMod.whiteSide}>
                     <div className={hotelMod.downText}>
-                        <h1 className={hotelMod.h1}>Welcome to White House Hotel</h1>
+                        <h1 className={hotelMod.h1}>Welcome to {hotelss.HotelName}</h1>
                         <p className={hotelMod.p2}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

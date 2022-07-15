@@ -7,20 +7,24 @@ import { collection, getDocs } from 'firebase/firestore';
 
 const Rooms = () => {
     const navigate = useNavigate();
-    const [RoomsInfo, setRoomsInfo] = useState([]);
-    
-    
+    const {state}=useLocation()
+    const {data} =state
+    const [hotelss,setHotelss]=useState({})
+    useEffect(()=>{
+        setHotelss(data)
+    })
 
+    const [RoomsInfo, setRoomsInfo] = useState([]);
     const [guest, setGuest] = useState([]);
     const userTableRef = collection(db, 'House Lodge')
-    useEffect(() => {
+/*     useEffect(() => {
         const getguest = async () => {
             const data = await getDocs(userTableRef)
             setGuest(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
         }
         getguest();
     }, [])
-
+ */
     const bookNow = (data) => {
        
         navigate("/Book", { state: { data: data } })
@@ -42,12 +46,12 @@ const Rooms = () => {
                 <h2 className={RoomMod.h2}>Rooms & Suites</h2>
                 <div className={RoomMod.roomType}>
 
-                    {guest.map((value, id) => (
+                    {hotelss.map((value, id) => (
                         <div className={RoomMod.superiorDoubleRoom} key={id}>
 
                             <h3>{value.Type}</h3>
                             <h4>R{value.Price} </h4><h5>/per night</h5>
-                            <h6>{value.WhatIsInside}</h6>
+                            <h6>hhh</h6>
                             <img src={value.RoomPic} />
                             <button type='submit' onClick={ bookNow}>Book Now</button>
                         </div>

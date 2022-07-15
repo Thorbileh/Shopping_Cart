@@ -7,12 +7,10 @@ import { collection, getDocs } from 'firebase/firestore';
 
 const Rooms = () => {
     const navigate = useNavigate();
-    const [RoomsInfo, setRoomsInfo] = useState([]);
-
-
-
+    
     const [guest, setGuest] = useState([]);
     const userTableRef = collection(db, 'Khayalami')
+    
     useEffect(() => {
         const getguest = async () => {
             const data = await getDocs(userTableRef)

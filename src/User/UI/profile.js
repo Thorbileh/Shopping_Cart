@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuth, upload } from '../../firebase/index';
 import img1 from "./pp.png";
-
+import LandingModule from '../Landing.module.css'
 
 function Profile() {
 
@@ -27,10 +27,10 @@ function Profile() {
       },[currentUser])
    
   return (
-    <div>
+    <div className={LandingModule.profile}>
         <input type="file" onChange={handleChange} />
         <button disabled={loading|| !photo} onClick={handleClick}>upload</button>
-        <img src={photoURL} alt="avator" className='profile'/>
+        <img src={photoURL} alt="avator" className='tv'/>
     </div>
   )
 

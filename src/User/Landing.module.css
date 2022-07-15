@@ -6,10 +6,9 @@
 }
 
 .fill img {
-  background-image: image("images/Country_Lane_Lodge/large-pool-children-s.jpg");
+/*   background-image: image("images/Country_Lane_Lodge/large-pool-children-s.jpg"); */
   flex-shrink: 0;
-  /* min-width: 100%;
-  min-height: 100% */
+
 }
 
 .find h1 {
@@ -32,7 +31,17 @@ nav {
   background-color: rgba(82, 115, 121, 0.938);
   width: 1799px
 }
-
+.profile{ 
+  transform: translate(-50%, -50%);
+  background-color: rgba(82, 115, 121, 0.938);
+ border-radius: 50%;
+ display: flex;
+ margin-top: 10px;
+}
+.profile img{
+  width: 50px;
+  height: 50px;
+}
 .search {
   display: flex;
   color: black;
@@ -74,7 +83,8 @@ nav a {
   color: white;
   font-size: 30px;
   font-weight: bold;
-  margin: 10px;
+  padding: 10px;
+  margin-left: 100px;
 }
 
 p {
@@ -116,6 +126,7 @@ p {
   display: flex;
   margin: auto;
   text-align: center;
+  
 }
 
 .Hotels img {
@@ -124,14 +135,15 @@ p {
   max-width: 100%;
   height: 80%;
   margin: auto;
+
 }
 
 .checked {
   color: orange;
 }
 
-.country {
-  margin-left: 10%;
+.Country {
+  margin-left: 10px;
 }
 
 .Hotels h3 {

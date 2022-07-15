@@ -8,19 +8,23 @@
 
 .hotNav {
     display: flex;
-    position: absolute;
-    top: 4%;
-    left: 62%;
-    transform: translate(-50%, -50%);
-    width:1690px;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(82, 115, 121, 0.938);
+  width: 1700px
 }
 
 .hotNav a {
+
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
-    margin: 13px;
+    padding: 10px;
+    margin-left: 100px;
+
 }
 
 a:hover {
@@ -86,34 +90,38 @@ a:hover {
     width: 50%;
     display: flex;
     margin-top: -320px;
-   
+
 }
 
 .gallary img {
     max-width: 80%;
-    height:auto;
+    height: auto;
     margin: auto;
     height: 250px;
 }
-.gallary button{
+
+.gallary button {
     border-radius: 20px;
-    width:110px;
-    height:40px;
+    width: 110px;
+    height: 40px;
     font-size: 30px;
     margin-top: 20px;
     margin-top: 400px;
     margin-left: -600px;
-   background-color: antiquewhite;
+    background-color: antiquewhite;
 }
-.pic1{
-  margin-top: -10px;
-  margin-left: 80px;
+
+.pic1 {
+    margin-top: -10px;
+    margin-left: 80px;
 }
-.pic2{
+
+.pic2 {
     margin-top: 220px;
     margin-left: -200px;
 }
-.whiteSide{
+
+.whiteSide {
     margin-top: -70px;
     background-color: aliceblue;
     margin-left: auto;
@@ -122,8 +130,9 @@ a:hover {
     width: 1700px;
 
 }
-.lastPasrt{
-background-color: rgba(247, 247, 247, 0.2);
+
+.lastPasrt {
+    background-color: rgba(247, 247, 247, 0.2);
     margin-left: auto;
     margin-right: auto;
     height: 600px;
@@ -131,24 +140,28 @@ background-color: rgba(247, 247, 247, 0.2);
     text-align: center;
     display: flex;
 }
+
 .lastPasrt .contact {
     margin-top: 150px;
     margin-left: 250px;
 }
+
 .lastPasrt .ForCustomer {
     margin-top: 150px;
     margin-left: 160px;
 }
-.downText button{
+
+.downText button {
     border-radius: 20px;
-    width:100px;
-    height:40px;
+    width: 100px;
+    height: 40px;
     font-size: 30px;
     margin-top: 20px;
-   background-color: antiquewhite;
+    background-color: antiquewhite;
 }
- .maps{
-  
-  margin-left: 100px;
+
+.maps {
+
+    margin-left: 100px;
 
 }

@@ -8,9 +8,25 @@
  }
 
  .hotNav {
-     width: 1700px;
+    display: flex;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(82, 115, 121, 0.938);
+  width: 1700px
+}
 
- }
+.hotNav a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 100px;
+
+}
 
  .rooms {
      margin-top: 80px;
